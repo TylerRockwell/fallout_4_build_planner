@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20151201033245) do
   create_table "perk_types", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.integer  "special_level"
     t.integer  "total_ranks"
-    t.integer  "special_stat_id"
+    t.integer  "special_stat_type_id"
   end
 
   create_table "perks", force: :cascade do |t|
