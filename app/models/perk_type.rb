@@ -1,3 +1,3 @@
 class PerkType < ActiveRecord::Base
-  belongs_to :perk
+  has_many :perks
 end

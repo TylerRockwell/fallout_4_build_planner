@@ -12,7 +12,7 @@ class BuildsController < ApplicationController
 
   # GET /builds/new
   def new
-    @build = Build.new
+    @build = Build.new()
   end
 
   # GET /builds/1/edit
