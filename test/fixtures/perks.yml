@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  build_id: 1
+  special_stat_id: 1
+  perk_type_id: 1
+  total_ranks: 1
+  current_rank: 1
+
+two:
+  build_id: 1
+  special_stat_id: 1
+  perk_type_id: 1
+  total_ranks: 1
+  current_rank: 1
