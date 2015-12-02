@@ -12,7 +12,8 @@ class BuildsController < ApplicationController
 
   # GET /builds/new
   def new
-    @build = Build.new()
+    @build = Build.new
+    @build.save
   end
 
   # GET /builds/1/edit
@@ -53,6 +54,7 @@ class BuildsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def build_params
-      params.require(:build).permit(:name, :description)
+      params.require(:build).permit(:name, :description, perks_attributes: [:id, :current_rank],
+          special_stats_attributes: [:level, :id])
     end
 end

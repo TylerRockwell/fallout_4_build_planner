@@ -1,10 +1,10 @@
 class Build < ActiveRecord::Base
-  has_many :special_stats
-  has_many :perks
+  has_many :special_stats, dependent: :destroy
+  has_many :perks, dependent: :destroy
 
   accepts_nested_attributes_for :special_stats, :perks
 
-  after_initialize :initialize_stats
+  before_create :initialize_stats
 
   protected
   def initialize_stats
@@ -13,8 +13,9 @@ class Build < ActiveRecord::Base
   end
 
   def set_special
-    (1..7).each do |x|
-      stat = SpecialStat.new(special_stat_type_id: x, level: 1)
+    all_specials = SpecialStatType.all
+    all_specials.each do |special|
+      stat = SpecialStat.new(special_stat_type_id: special.id, level: 1)
       special_stats << stat
     end
   end

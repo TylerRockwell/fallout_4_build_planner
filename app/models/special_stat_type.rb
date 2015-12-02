@@ -1,3 +1,3 @@
 class SpecialStatType < ActiveRecord::Base
-  belongs_to :special_stat
+  has_many :special_stats
 end

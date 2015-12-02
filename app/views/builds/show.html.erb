@@ -10,5 +10,19 @@
   <%= @build.description %>
 </p>
 
+<p>
+  <strong>SPECIAL Stats:</strong>
+  <% @build.special_stats.each do |special| %>
+    <%= special.name %>: <%= special.level %>
+  <% end %>
+</p>
+
+<p>
+  <strong>SPECIAL Stats:</strong>
+  <% @build.perks.each do |perk| %>
+    <%= perk.name %>: <%= perk.current_rank %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_build_path(@build) %> |
 <%= link_to 'Back', builds_path %>
