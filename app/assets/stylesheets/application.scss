@@ -10,6 +10,39 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "builds";
+
+// Show page styles
+
+.build-title{
+  margin-bottom: 5%;
+  font-size: 24px;
+  build-description{
+    font-size: 12px;
+    color: #364653;
+  }
+}
+// SPECIAL stat styles
+.increase-special{
+  color: #42C800;
+}
+
+.special-name{
+  font-weight: 500;
+}
+
+.special-level{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+// Perk styles
+.increase-perk{
+  color: #42C800;
+}
+.perk-name{
+  font-weight: 500;
+}

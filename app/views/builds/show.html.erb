@@ -1,28 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @build.name %>
-</p>
+<div class="row build-title">
+  <p><%= @build.name %> - <%= @build.description %></p>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @build.description %>
-</p>
+<% @build.special_stats.each do |special| %>
+  <div class="row special-stats">
+    <div class="col-md-2 special-name"><%= special.name %></div>
+    <div class="col-md-2">
+      <span class="glyphicon glyphicon-triangle-left decrease-special"></span>
+      <span class="special-level"><%= special.level %></span>
+      <span class="glyphicon glyphicon-triangle-right increase-special"></span>
+    </div>
+  </div>
+<% end %>
 
-<p>
-  <strong>SPECIAL Stats:</strong>
-  <% @build.special_stats.each do |special| %>
-    <%= special.name %>: <%= special.level %>
-  <% end %>
-</p>
+<h3>Perks:</h3>
 
-<p>
-  <strong>SPECIAL Stats:</strong>
-  <% @build.perks.each do |perk| %>
-    <%= perk.name %>: <%= perk.current_rank %>
-  <% end %>
-</p>
+<% @build.perks.each do |perk| %>
+  <div class="row perks">
+    <div class="col-md-2 perk-name"><%= perk.name %></div>
+    <div class="col-md-3">
+      <span class="glyphicon glyphicon-triangle-left decrease-perk"></span>
+        <%= perk.current_rank %>/<%= perk.perk_type.total_ranks%>
+      <span class="glyphicon glyphicon-triangle-right increase-perk"></span>
+    </div>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_build_path(@build) %> |
 <%= link_to 'Back', builds_path %>

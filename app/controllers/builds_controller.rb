@@ -49,7 +49,7 @@ class BuildsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_build
-      @build = Build.find(params[:id])
+      @build = Build.includes([{perks: :perk_type}, {special_stats: :special_stat_type}]).find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
