@@ -8,6 +8,7 @@ class BuildsController < ApplicationController
 
   # GET /builds/1
   def show
+    @perk_specials = SpecialStatType.all
   end
 
   # GET /builds/new

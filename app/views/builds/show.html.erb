@@ -1,32 +1,43 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row build-title">
-  <p><%= @build.name %> - <%= @build.description %></p>
+  <div class=col-md-10><h2><%= @build.name %> - <%= @build.description %></h2></div>
+  <div class="btn-primary">Save this build</div>
 </div>
 
-<% @build.special_stats.each do |special| %>
-  <div class="row special-stats">
-    <div class="col-md-2 special-name"><%= special.name %></div>
-    <div class="col-md-2">
-      <span class="glyphicon glyphicon-triangle-left decrease-special"></span>
-      <span class="special-level"><%= special.level %></span>
-      <span class="glyphicon glyphicon-triangle-right increase-special"></span>
+<div class="prompt">
+  You can allocate <span class="points-remaining">21</span> points to your SPECIAL Stats
+</div>
+
+<div class="special">
+  <% @build.special_stats.each do |special| %>
+    <div class="row special-stats">
+      <div class="col-md-2 special-name"><%= special.name %></div>
+      <div class="col-md-2">
+        <span class="glyphicon glyphicon-triangle-left decrease-special"></span>
+        <span class="special-level"><%= special.level %></span>
+        <span class="glyphicon glyphicon-triangle-right increase-special"></span>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
 
-<h3>Perks:</h3>
-
-<% @build.perks.each do |perk| %>
-  <div class="row perks">
-    <div class="col-md-2 perk-name"><%= perk.name %></div>
-    <div class="col-md-3">
-      <span class="glyphicon glyphicon-triangle-left decrease-perk"></span>
+<div class="row seven-cols perks">
+  <% @perk_specials.each do |perk_special| %>
+    <div class="col-md-1 perk-name">
+    <% @build.perks.each do |perk| %>
+      <% if perk.perk_type.special_stat_type_id == perk_special.id %>
+        <span class="perk-name"><%= perk.name %></span>
+        <br />
+        <span class="glyphicon glyphicon-triangle-left decrease-perk"></span>
         <%= perk.current_rank %>/<%= perk.perk_type.total_ranks%>
-      <span class="glyphicon glyphicon-triangle-right increase-perk"></span>
+        <span class="glyphicon glyphicon-triangle-right increase-perk"></span>
+        <br />
+      <% end %>
+    <% end %>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_build_path(@build) %> |
 <%= link_to 'Back', builds_path %>

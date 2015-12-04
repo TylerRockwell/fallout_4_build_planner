@@ -15,15 +15,49 @@
  @import "bootstrap";
  @import "builds";
 
+.container{
+  font-size: 18px;
+  font-family: helvetica;
+  width: 90%;
+  color: #000;
+}
+
+.prompt{
+  margin-bottom: 1%;
+  color: #666;
+}
+
+.btn-primary{
+  text-align: center;
+  border-radius: 5px;
+  width: 15%;
+  float: right;
+}
+
+@media (min-width: 768px){
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+    *width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+
 // Show page styles
 
 .build-title{
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   font-size: 24px;
-  build-description{
-    font-size: 12px;
-    color: #364653;
-  }
+  border-bottom: 1px solid #364653;
 }
 // SPECIAL stat styles
 .increase-special{
@@ -39,7 +73,15 @@
   margin-right: 2%;
 }
 
+.special{
+  margin-bottom: 3%;
+}
+
 // Perk styles
+.perks{
+  margin-bottom: 3%;
+  text-align: center;
+}
 .increase-perk{
   color: #42C800;
 }
