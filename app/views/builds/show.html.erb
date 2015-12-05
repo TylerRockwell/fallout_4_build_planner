@@ -2,7 +2,6 @@
 
 <div class="row build-title">
   <div class=col-md-10><h2><%= @build.name %> - <%= @build.description %></h2></div>
-  <div class="btn-primary">Save this build</div>
 </div>
 
 <div class="prompt">
@@ -22,6 +21,7 @@
   <% end %>
 </div>
 
+<div class="perks-used">You have spent <span class="num-perks">0</span> perks.</div>
 <div class="row seven-cols perks">
   <% @perk_specials.each do |perk_special| %>
     <div class="col-md-1 perk-name">
@@ -30,7 +30,7 @@
         <span class="perk-name"><%= perk.name %></span>
         <br />
         <span class="glyphicon glyphicon-triangle-left decrease-perk"></span>
-        <%= perk.current_rank %>/<%= perk.perk_type.total_ranks%>
+        <span class="perk-level"><%= perk.current_rank %>/<%= perk.perk_type.total_ranks%></span>
         <span class="glyphicon glyphicon-triangle-right increase-perk"></span>
         <br />
       <% end %>
