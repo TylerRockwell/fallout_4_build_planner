@@ -27,7 +27,7 @@ $(document).ready(function (){
 
 // SPECIAL Stat Handling
 function increaseSpecial(){
-  //Increment corresponsding SPECIAL stat by 1 point
+  //Increase corresponsding SPECIAL stat by 1 point
   pointsRemaining = parseInt($(".points-remaining")[0].innerHTML);
   specialValue = $(this).prev(".special-level")[0].innerHTML;
   //If SPECIAL stat level is currently less than 10, increase by one
@@ -44,7 +44,7 @@ function increaseSpecial(){
 }
 
 function decreaseSpecial(){
-  //Decrement corresponsding SPECIAL stat by 1 point
+  //Decrease corresponsding SPECIAL stat by 1 point
   specialValue = $(this).next(".special-level")[0].innerHTML;
   if (specialValue > 1){
     $(this).next(".special-level")[0].innerHTML = parseInt(specialValue) - 1;
@@ -54,7 +54,7 @@ function decreaseSpecial(){
       updateSpecialRemaining(false);
     }
     else{
-      // Decrements perks used if perks have been used to increase SPECIAL
+      // Decreases perks used if perks have been used to increase SPECIAL
       updatePerksUsed(false);
     }
   }
