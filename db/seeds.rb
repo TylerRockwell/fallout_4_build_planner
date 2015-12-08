@@ -14,8 +14,8 @@ SpecialStatType.create!(name: "Luck", description: "Your general good fortune an
 ### Perks ###
 
 # Strength Perks
-PerkType.create!(name: "Strength", description: "Working out has paid off. You are stronger than ever. Increase Strength by 1.",
-    total_ranks: 9, special_level: 1, special_stat_type_id: 1)
+# PerkType.create!(name: "Strength", description: "Working out has paid off. You are stronger than ever. Increase Strength by 1.",
+#     total_ranks: 9, special_level: 1, special_stat_type_id: 1)
 PerkType.create!(name: "Iron Fist", description: "Channel your chi to unleash devastating fury! If you're the pugilistic sort and favor unarmed weaponry to inflict pain and suffering to an ever-more impressive degree, this is the perk for you! Let's not dwell on the slight shortfall of the difficulty in fighting multiple opponents at once; this focuses all of your muscle on one hapless fool.",
     total_ranks: 5, special_level: 1, special_stat_type_id: 1)
 PerkType.create!(name: "Big Leagues", description: "Swing for the fences! If you design a bludgeoning or bladed method of bringing an end to your foes, this is the perk to take. Though difficult to battle against multiple enemies in the same space, close combat is much more impressive when your damage is increased.",
@@ -38,8 +38,8 @@ PerkType.create!(name: "Pain Train", description: "Choo-Choo! All Aboard! Turnin
     total_ranks: 3, special_level: 10, special_stat_type_id: 1)
 
 # Perception Perks
-PerkType.create!(name: "Perception", description: "Some may call it paranoia, but you call it paying attention. Increase Perception by 1 point.",
-    total_ranks: 9, special_level: 1, special_stat_type_id: 2)
+# PerkType.create!(name: "Perception", description: "Some may call it paranoia, but you call it paying attention. Increase Perception by 1 point.",
+#     total_ranks: 9, special_level: 1, special_stat_type_id: 2)
 PerkType.create!(name: "Pickpocket", description: "Your quick hands and sticky fingers make picking pockets 25% easier.",
     total_ranks: 4, special_level: 1, special_stat_type_id: 2)
 PerkType.create!(name: "Rifleman", description: "Keep your distance long and your kill-count high. Attacks with non-automatic rifles do 20% more damage.",
@@ -62,8 +62,8 @@ PerkType.create!(name: "Concentrated Fire", description: "Stay Focused! In V.A.T
     total_ranks: 3, special_level: 10, special_stat_type_id: 2)
 
 # Endurance Perks
-PerkType.create!(name: "Endurance", description: "You don't let little things like nuclear fallout keep you down. Increase Endurance by 1 point.",
-    total_ranks: 9, special_level: 1, special_stat_type_id: 3)
+# PerkType.create!(name: "Endurance", description: "You don't let little things like nuclear fallout keep you down. Increase Endurance by 1 point.",
+#     total_ranks: 9, special_level: 1, special_stat_type_id: 3)
 PerkType.create!(name: "Toughness", description: "If nothing else, you can take a beating! Instantly gain +10 Damage Resistance.",
     total_ranks: 5, special_level: 1, special_stat_type_id: 3)
 PerkType.create!(name: "Lead Belly", description: "Your digestive tract has adjusted to the weirdness of the Wasteland! Take less radiation from eating or drinking.",
@@ -86,8 +86,8 @@ PerkType.create!(name: "Solar Powered", description: "Catch some rays! Gain +2 t
     total_ranks: 3, special_level: 10, special_stat_type_id: 3)
 
 # Charisma Perks
-PerkType.create!(name: "Charisma", description: "It's not lying unless you get caught! Increase Charisma by 1 point.",
-    total_ranks: 9, special_level: 1, special_stat_type_id: 4)
+# PerkType.create!(name: "Charisma", description: "It's not lying unless you get caught! Increase Charisma by 1 point.",
+#     total_ranks: 9, special_level: 1, special_stat_type_id: 4)
 PerkType.create!(name: "Cap Collector", description: "You've mastered the art of the deal! Buying and selling prices at vendors are better.",
     total_ranks: 3, special_level: 1, special_stat_type_id: 4)
 PerkType.create!(name: "Lady Killer", description: "You're charming... and dangerous. Men/Women suffer +5% damage in combat, and are easier to persuade in dialogue.",
@@ -110,8 +110,8 @@ PerkType.create!(name: "Intimidation", description: "Time to show everyone who's
     total_ranks: 3, special_level: 10, special_stat_type_id: 4)
 
 # Intelligence Perks
-PerkType.create!(name: "Intelligence", description: "To survive in the Wasteland, you must be smarter than the next guy. Increase Intelligence by 1 point.",
-    total_ranks: 9, special_level: 1, special_stat_type_id: 5)
+# PerkType.create!(name: "Intelligence", description: "To survive in the Wasteland, you must be smarter than the next guy. Increase Intelligence by 1 point.",
+#     total_ranks: 9, special_level: 1, special_stat_type_id: 5)
 PerkType.create!(name: "V.A.N.S.", description: "Let Vault-Tec guide you! The path to your closest quest target is displayed in V.A.T.S.",
     total_ranks: 1, special_level: 1, special_stat_type_id: 5)
 PerkType.create!(name: "Medic", description: "Is there a doctor in the house? Stimpaks restore 40% of lost Health, and RadAway removes 40% of radiation.",
@@ -134,8 +134,8 @@ PerkType.create!(name: "Nerd Rage!", description: "Genius. Is. ANGRY! When your 
     total_ranks: 3, special_level: 10, special_stat_type_id: 5)
 
 # Agility Perks
-PerkType.create!(name: "Agility", description: "You've been practicing your sweet moves. Increase Agility by 1 point.",
-    total_ranks: 9, special_level: 1, special_stat_type_id: 6)
+# PerkType.create!(name: "Agility", description: "You've been practicing your sweet moves. Increase Agility by 1 point.",
+#     total_ranks: 9, special_level: 1, special_stat_type_id: 6)
 PerkType.create!(name: "Gunslinger", description: "Channel the spirit of the old west! Non-automatic pistols do 20% more damage.",
     total_ranks: 5, special_level: 1, special_stat_type_id: 6)
 PerkType.create!(name: "Commando", description: "Rigorous combat training means automatic weapons do 20% more damage.",
@@ -158,8 +158,8 @@ PerkType.create!(name: "Gun Fu", description: "You've learned to apply ancient m
     total_ranks: 3, special_level: 10, special_stat_type_id: 6)
 
 # Luck Perks
-PerkType.create!(name: "Luck", description: "Things just seem to always work out for you. Increase Luck by 1 point.",
-    total_ranks: 9, special_level: 1, special_stat_type_id: 7)
+# PerkType.create!(name: "Luck", description: "Things just seem to always work out for you. Increase Luck by 1 point.",
+#     total_ranks: 9, special_level: 1, special_stat_type_id: 7)
 PerkType.create!(name: "Fortune Finder", description: "You find more bottle caps in containers.",
     total_ranks: 4, special_level: 1, special_stat_type_id: 7)
 PerkType.create!(name: "Scrounger", description: "You find more ammunition in containers.",

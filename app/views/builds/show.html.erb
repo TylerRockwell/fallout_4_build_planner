@@ -21,10 +21,14 @@
   <% end %>
 </div>
 
-<div class="perks-used">You have spent <span class="num-perks">0</span> perks.</div>
+<div class="perks-prompt">
+  On each level up, you can invest in the perks below, or add one to a SPECIAL stat above.
+  You have spent <span class="num-perks">0</span> perks.
+</div>
+
 <div class="row seven-cols perks">
   <% @perk_specials.each do |perk_special| %>
-    <div class="col-md-1 perk-name">
+    <div class="col-md-1">
     <% @build.perks.each do |perk| %>
       <% if perk.perk_type.special_stat_type_id == perk_special.id %>
         <span class="perk-name"><%= perk.name %></span>
