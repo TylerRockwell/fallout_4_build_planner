@@ -18,11 +18,11 @@ SpecialStatType.create!(name: "Luck", description: "Your general good fortune an
 #     total_ranks: 9, special_level: 1, special_stat_type_id: 1)
 PerkType.create!(name: "Iron Fist", description:
     "Channel your chi to unleash devastating fury! <p />
-    <b>Rank 1</b>: Punching attacks do 20% more damage to your opponent.<p />
-    <b>Rank 2</b>: Punching attacks now do 40% and can disarm your opponent.<p />
-    <b>Rank 3</b>: Punching attacks now do 60% more damage. Unarmed Power Attacks have a chance to cripple one of your opponent's limbs.<p />
-    <b>Rank 4</b>: Punching attacks now do 80%. Unarmed Power Attacks have an increased chance to cripple one of your opponent's limbs.<p />
-    <b>Rank 5</b>: Punching attacks now do double damage. Criticals in V.A.T.S. will paralyze your opponent.",
+    <span class='popover-rank-header'>Rank 1</span>: Punching attacks do 20% more damage to your opponent.<p />
+    <span class='popover-rank-header'>Rank 2</span>: Punching attacks now do 40% and can disarm your opponent.<p />
+    <span class='popover-rank-header'>Rank 3</span>: Punching attacks now do 60% more damage. Unarmed Power Attacks have a chance to cripple one of your opponent's limbs.<p />
+    <span class='popover-rank-header'>Rank 4</span>: Punching attacks now do 80%. Unarmed Power Attacks have an increased chance to cripple one of your opponent's limbs.<p />
+    <span class='popover-rank-header'>Rank 5</span>: Punching attacks now do double damage. Criticals in V.A.T.S. will paralyze your opponent.",
     total_ranks: 5, special_level: 1, special_stat_type_id: 1)
 PerkType.create!(name: "Big Leagues", description: "Swing for the fences! If you design a bludgeoning or bladed method of bringing an end to your foes, this is the perk to take. Though difficult to battle against multiple enemies in the same space, close combat is much more impressive when your damage is increased.",
     total_ranks: 5, special_level: 2, special_stat_type_id: 1)

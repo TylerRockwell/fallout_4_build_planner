@@ -12,10 +12,11 @@ class BuildsController < ApplicationController
   end
 
   # GET /builds/new
-  def new
-    @build = Build.new
-    @build.save
-  end
+  # def new
+  #   @build = Build.create
+  #
+  #   redirect_to edit_build_path(@build)
+  # end
 
   # GET /builds/1/edit
   def edit
@@ -23,7 +24,7 @@ class BuildsController < ApplicationController
 
   # POST /builds
   def create
-    @build = Build.new(build_params)
+    @build = Build.new
 
     if @build.save
       redirect_to @build, notice: 'Build was successfully created.'
