@@ -23,7 +23,17 @@ $(document).ready(function (){
   $(".decrease-special").on("click", decreaseSpecial);
   $(".increase-perk").on("click", increasePerk);
   $(".decrease-perk").on("click", decreasePerk);
-  $('[data-toggle="popover"]').popover(); 
+  //Add perk description popovers
+  $('[data-toggle="popover"]').popover({
+    html: 'true',
+    container: '.container',
+    trigger: 'hover',
+    delay: {
+      show: '500',
+      hide: '100'
+    },
+    placement: 'top'
+  });
 });
 
 // SPECIAL Stat Handling
@@ -125,3 +135,9 @@ function updatePerksUsed(perkIncreased){
     $(".num-perks")[0].innerHTML = perksUsed - 1;
   }
 }
+
+//Perk descriptions
+
+// $('.perk-name').popover(){
+//
+// }

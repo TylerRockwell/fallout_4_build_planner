@@ -31,7 +31,7 @@
     <div class="col-md-1">
     <% @build.perks.each do |perk| %>
       <% if perk.perk_type.special_stat_type_id == perk_special.id %>
-        <span class="perk-name" data-toggle="popover" data-trigger="hover" title="<%= perk.name %>" data-content="<%= perk.description%>">
+        <span class="perk-name" data-toggle="popover" title="<%= perk.name %>" data-content="<%= perk.description%>">
           <%= perk.name %>
         </span>
         <br />
