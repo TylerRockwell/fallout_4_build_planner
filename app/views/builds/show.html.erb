@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row build-title">
-  <div class=col-md-10><h2><%= @build.name %> - <%= @build.description %></h2></div>
+  <div class=col-md-12><h2><%= @build.name %> - <%= @build.description %> <%= link_to "", edit_build_path(@build), class: " change-name glyphicon glyphicon-pencil" %></h2></div>
 </div>
 
 <div class="prompt">

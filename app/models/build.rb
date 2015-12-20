@@ -8,6 +8,8 @@ class Build < ActiveRecord::Base
 
   protected
   def initialize_stats
+    self.name = "Lone Wanderer"
+    self.description = "Just another wastelander"
     set_special
     set_perks
   end
