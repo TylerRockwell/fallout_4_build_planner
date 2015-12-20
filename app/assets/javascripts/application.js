@@ -23,6 +23,7 @@ $(document).ready(function (){
   $(".decrease-special").on("click", decreaseSpecial);
   $(".increase-perk").on("click", increasePerk);
   $(".decrease-perk").on("click", decreasePerk);
+  $('[data-toggle="popover"]').popover(); 
 });
 
 // SPECIAL Stat Handling

@@ -31,7 +31,9 @@
     <div class="col-md-1">
     <% @build.perks.each do |perk| %>
       <% if perk.perk_type.special_stat_type_id == perk_special.id %>
-        <span class="perk-name"><%= perk.name %></span>
+        <span class="perk-name" data-toggle="popover" data-trigger="hover" title="<%= perk.name %>" data-content="<%= perk.description%>">
+          <%= perk.name %>
+        </span>
         <br />
         <span class="glyphicon glyphicon-triangle-left decrease-perk"></span>
         <span class="perk-level"><%= perk.current_rank %>/<%= perk.perk_type.total_ranks%></span>
